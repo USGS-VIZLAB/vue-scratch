@@ -12,7 +12,6 @@
 </template>
 <script>
 import * as d3Base from 'd3';
-import flowers from "@/assets/flowerpower.svg";
 export default {
   name: "rain",
     components: {
@@ -42,7 +41,6 @@ export default {
       this.width = window.innerWidth - this.margin.left - this.margin.right;
       this.height = window.innerHeight*.5 - this.margin.top - this.margin.bottom;
 
-      this.svg = this.d3.select("rain-svg")
       this.canvas = document.getElementById('myCanvas')       
       this.makeItRain()
 
