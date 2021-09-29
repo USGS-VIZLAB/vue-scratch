@@ -8,12 +8,10 @@
 export default {
     name: 'Visualization',
     components: {
-
     },
     computed: {
     },
     mounted(){
-      const self = this;
       
     },
     methods:{
