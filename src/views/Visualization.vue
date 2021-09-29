@@ -1,6 +1,5 @@
 <template>
   <div id="visualization">
-    <rain />
   </div>
 </template>
 
@@ -9,7 +8,6 @@
 export default {
     name: 'Visualization',
     components: {
-      rain: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/rain")
     },
     computed: {
     },
