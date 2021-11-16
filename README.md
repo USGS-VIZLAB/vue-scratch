@@ -36,7 +36,7 @@ Then you are ready to go!
 1. Commit your components to this repository to help build a library of elements to use in future work. Components do not need to be perfect, use your discretion to decide whether or not it is worth keeping.
 1. Do not commit changes to `Visualization.vue` or `App.vue` that are specific to your components. This should be kept clean for others to be able to easily step into and start working.
 1. Update dependencies as needed.
-1. Do not commit large data or image files. If a component depends on these, include clear annotations in the code for where or who to reach out to for them. Ideally these will all be contained in AWS, but that may not be the case as we are in the early stages of development where scratch is needed.
+1. Do not commit large data or image files. If a component depends on these, push them to the public S3 bucket and read in that way. Ideally all files be contained in AWS, but that may not be the case as we are in the early stages of development where scratch is needed. Provide comments on where files can be located if not in S3.
 1. Provide documentation for reusable components stored in the repo below. This is not necessary for all scratch work, but will help us develop a collection of useful components and code examples as we continue to learn new things. 
 
 
