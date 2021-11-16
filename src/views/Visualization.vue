@@ -1,5 +1,6 @@
 <template>
   <div id="visualization">
+    <DragNDrop />
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
+      DragNDrop: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/DragNDrop")
     },
     computed: {
     },
