@@ -72,7 +72,7 @@ $Assistant: 'Assistant', sans-serif;
 html,
 body {
       height:100%;
-      background-color: rgb(237, 237, 237);
+      background-color: white;
       margin: 0;
       padding: 0;
       line-height: 1.2;

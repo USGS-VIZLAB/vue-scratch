@@ -52,13 +52,13 @@ export default {
       var w = this.canvas.width = window.innerWidth;
       var h = this.canvas.height = window.innerHeight;
 
-      var yPositions = Array(70).join(0).split('');
+      var yPositions = Array(60).join(0).split('');
       //var texty = this.getRandomInt(0,9);
       //console.log(texty)
     
     function runMatrix() {
     if (typeof Game_Interval != 'undefined') clearInterval(Game_interval);
-           var Game_Interval = setInterval(drawScreen, 50); // higher = slower
+           var Game_Interval = setInterval(drawScreen, 30); // higher = slower
         }
 
         function getRandomInt(min, max) {
@@ -68,19 +68,20 @@ export default {
     }
 
         function drawScreen () {
-            ctx.fillStyle = 'rgba(255, 255, 255, .25)'; // higher a = shorter trails
+            ctx.fillStyle = 'rgba(255, 255, 255, .15)'; // higher a = shorter trails
             ctx.fillRect(0, 0, w, h);
             ctx.fillStyle = 'dodgerblue';
-            ctx.font = '14px arial';
+            ctx.font = '12px arial';
             yPositions.map(function(y, index){
-            var text = "" + getRandomInt(0,9);
+            var text = "" + getRandomInt(0,2);
             //var text = String.fromCharCode(1e2 + Math.random() * 33);
-            var x = (index * 20) + 10;
+            var x = (index * 20) + 20;
             ctx.fillText(text, x, y);
             if (y > 100 + Math.random() * 1e4) {
                 yPositions[index] = 0;
             } else {
-                yPositions[index] = y + 15; // how close together stacked vertically and dist travelled. 10 is ok
+                yPositions[index] = y + 12; // how close together stacked vertically and dist travelled. 10 is ok
+
             }
             })
         }
