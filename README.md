@@ -49,3 +49,7 @@ Then you are ready to go!
 `rain.vue`: A canvas-based animation of numbers falling like rain. Numeric inputs to customize the animation are annotated in the code. Uses flex positioning to fill screen.
 
 `Sidebar.vue`: An expandable box used to define terms when clicked on. Can be seen in action in `snow-to-flow`. Useful for providing more information for those who are looking for it.
+
+`VizSection.vue`: A template for a visualization that includes (1) a takeaway title, (2) figure(s), (3) a figure caption, and (4) slots for text explanations either above of below the figure. This was used for the repeating sections in `snow-to-flow`. Works well with `Figure.vue`. Classes `.maxWidth`, `single`, `.group`, `.two`, and `.three` can be added to figure elements to defien how they arrange within view.
+
+`Figure.vue`: An image or figure template. Includes structure to include size and type options to fit the viewport and device type. 
