@@ -1,6 +1,11 @@
 <template>
   <div class="flex-container">
     <div class="flex-item">
+      <source
+          srcset=""
+          type="image/webp"
+          media="(max-width: 1200px)"
+        >
       <picture>
         <source
           srcset=""

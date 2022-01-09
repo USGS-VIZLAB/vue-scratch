@@ -1,11 +1,12 @@
 <template>
   <section>
-
-<div id="grid-container">
-    <div id="map-container">
-       <DAsvg id="map_gwl" class="map" />
-    </div>
-   
+    <div id="grid-container">
+      <div id="map-container">
+        <DAsvg
+          id="map_gwl"
+          class="map"
+        />
+      </div>
     </div>
   </section>
 </template>
