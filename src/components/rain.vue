@@ -1,19 +1,22 @@
 <template>
   <section>
-
-<div id="grid-container">
-        <div id="rain-container">
-            <!-- <svg id="rain-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900"></svg> -->   
-        <canvas id="myCanvas" width="1600" height="900"></canvas>
-        </div>
-        <!--  <flowers /> -->
+    <div id="grid-container">
+      <div id="rain-container">
+        <!-- <svg id="rain-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900"></svg> -->   
+        <canvas
+          id="myCanvas"
+          width="1600"
+          height="900"
+        />
+      </div>
+      <!--  <flowers /> -->
     </div>
   </section>
 </template>
 <script>
 import * as d3Base from 'd3';
 export default {
-  name: "rain",
+  name: "Rain",
     components: {
         //flowers
     },

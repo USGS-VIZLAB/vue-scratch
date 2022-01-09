@@ -1,16 +1,15 @@
 <template>
   <section>
-
-<div id="grid-container">
-         <img
-         src="@/assets/images/human-water-cycle-testing2-base-01.png"
-          type="image/png"
-          class="hwc"
-        />
-        <arrows class="hwc-arrows" />
-        <labels class="hwc-labels" />
-        <blobs class="hwc-blobs" />
-        <svg class="word-bank" />
+    <div id="grid-container">
+      <img
+        src="@/assets/images/human-water-cycle-testing2-base-01.png"
+        type="image/png"
+        class="hwc"
+      >
+      <arrows class="hwc-arrows" />
+      <labels class="hwc-labels" />
+      <blobs class="hwc-blobs" />
+      <svg class="word-bank" />
     </div>
   </section>
 </template>
