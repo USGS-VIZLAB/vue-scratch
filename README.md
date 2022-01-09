@@ -47,3 +47,5 @@ Then you are ready to go!
 `DA.vue`: An animated svg about data assimilation that demonstrates the use of `gsap` for a simple timeline animation. This depends on an external svg file `dasvg-01-01.svg`, which is imported via `svg-loader` and animated using `gsap`. The timeline animation is defined within the `initTime()` method. The final product can be seen here: https://twitter.com/USGS_DataSci/status/1431332579634991114/photo/1
 
 `rain.vue`: A canvas-based animation of numbers falling like rain. Numeric inputs to customize the animation are annotated in the code. Uses flex positioning to fill screen.
+
+`Sidebar.vue`: An expandable box used to define terms when clicked on. Can be seen in action in `snow-to-flow`. Useful for providing more information for those who are looking for it.
