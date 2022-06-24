@@ -9,7 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
-      DragNDrop: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/DragNDrop")
+      DragNDrop: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/DragNDrop2")
     },
     computed: {
     },
