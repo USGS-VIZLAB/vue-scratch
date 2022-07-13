@@ -1,6 +1,6 @@
 <template>
   <div id="visualization">
-    <DragNDrop />
+    <Rain />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
-      DragNDrop: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/DragNDrop2")
+      Rain: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/rain")
     },
     computed: {
     },
