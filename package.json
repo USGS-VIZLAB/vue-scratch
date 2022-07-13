@@ -1,5 +1,5 @@
 {
-  "name": "gw-conditions",
+  "name": "vue-scratch",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -44,7 +44,7 @@
     "@vue/cli-plugin-eslint": "^4.5.17",
     "@vue/cli-service": "^4.5.17",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "^7.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
