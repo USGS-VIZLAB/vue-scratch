@@ -5,6 +5,7 @@ A vue app to for experimental viz work.
 This app is intended to provide scratch space to experiment with javascript- and web-based ideas. It is set up with some dependencies common to Vizlab (e.g. D3, gsap, svg-loader, and uswds) and a simple template to import components into and work from there. To use it:
 1. Fork the repo and clone locally. 
 1. Set up the repository to work locally. Run `npm install` from terminal within the repository to install dependencies.
+1. If `npm install` is throwing errors, try to change your node version to `14.17.0` with `nvm`(https://github.com/nvm-sh/nvm)
 1. Execute `npm run serve` in the terminal to run locally. This will allow you to view the page as you work. The default page is empty with a USGS Vizlab logo in the upper righthand corner.
 1. Create and work in components. These are stored in `src/components/`. This will prevent conflicts if multiple people are working in the same repo. This is also a best practice for vue-based apps. [See this article](https://medium.com/@_shirish/thinking-in-components-with-vue-js-a35b5af12df) for an overview of working with Vue components.
 
