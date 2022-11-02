@@ -1,6 +1,6 @@
 <template>
   <div id="visualization">
-    <Rain />
+    <useDialogCard />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
-      Rain: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/rain")
+      useDialogCard: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/UseDialogCard")
     },
     computed: {
     },
