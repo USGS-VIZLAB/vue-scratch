@@ -1,4 +1,4 @@
-header,title,class,text,source,alt_text
+header,title,id,text,source,alt_text
 Item,Item A,item_a,This is item A,image_a.png,This is an image of the letter a
 Item,Item B,item_b,This is item B,image_b.png,This is an image of the letter b
 Item,Item C,item_c,This is item C,image_c.png,This is an image of the letter c
