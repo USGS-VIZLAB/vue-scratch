@@ -14,6 +14,7 @@ import VueCarousel from 'vue-carousel';
 import VueImg from 'v-img';
 import VueSvg from 'vue-svg-loader';
 import gsap from "gsap";
+import VueZoomer from 'vue-zoomer'
 
 
 // social icons
@@ -46,6 +47,7 @@ Vue.use(browserDetect);
 Vue.use(Vuetify);
 Vue.use(VueCarousel);
 Vue.use(VueImg, vueImgConfig);
+Vue.use(VueZoomer)
 
 
 const app = new Vue({
