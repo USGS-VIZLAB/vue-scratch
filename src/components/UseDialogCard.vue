@@ -1,7 +1,7 @@
 <template>
   <div id='page-content'>
     <section>
-      <button v-for="item in dialogData" :key="item.id" :id="item.id" class="itemButton" v-text="item.title" @click="textEvent"></button>
+      <button v-for="item in dialogData" :key="item.class" :id="item.class" class="itemButton" v-text="item.title" @click="textEvent"></button>
     </section>
     <section>
       <p>
@@ -78,7 +78,7 @@ export default {
 
         // read in data
         let promises = [
-            self.d3.csv(self.publicPath + "data/dialog_data.csv", this.d3.autoType)
+            self.d3.csv("https://labs.waterdata.usgs.gov/visualizations/data/dialog_data.csv", this.d3.autoType)
         ];
         Promise.all(promises).then(self.callback);
       },
@@ -96,7 +96,7 @@ export default {
           .enter()
           .append("rect")
             .attr("class", d => "rect")
-            .attr("id", d => d.id)
+            .attr("id", d => d.class)
             .attr("x", 10)
             .attr("y", function(d,i) { return i*30 + 30 })
             .attr("height", 5)
@@ -109,7 +109,7 @@ export default {
           .enter()
           .append("text")
             .attr("class", d => "rectText")
-            .attr("id", d => d.id)
+            .attr("id", d => d.class)
             .attr("text-anchor", "start")
             .attr("x", 20)
             .attr("y", function(d,i) { return i*30 + 37 })
@@ -124,8 +124,7 @@ export default {
         this.cardHeader = d.header;
         this.cardTitle = d.title;
         this.cardText = d.text;
-        let image_file = "@/assets/images/image_a.png"
-        this.cardImageSource = require("@/assets/images/" + d.source);
+        this.cardImageSource = "https://labs.waterdata.usgs.gov/visualizations/images/" + d.source;
         this.cardAltText = d.alt_text;
         this.showDialog = true;
       },
@@ -142,7 +141,7 @@ export default {
         const self = this;
 
         let itemData = self.dialogData.filter(function(dataRow) {
-          return dataRow.id === itemID
+          return dataRow.class === itemID
         })[0]
 
         return (itemData)
