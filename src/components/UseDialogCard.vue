@@ -1,5 +1,21 @@
 <template>
   <div id='page-content'>
+    <section>
+      <button v-for="item in dialogData" :key="item.id" :id="item.id" class="itemButton" v-text="item.title" @click="textEvent"></button>
+    </section>
+    <section>
+      <p>
+        Here is some random text where we mention that there is an 
+        <button id="item_a" class="itemButton" @click="textEvent">item A</button>
+        and also an 
+        <button id="item_b" class="itemButton" @click="textEvent">item B</button>
+        , and 
+        <button id="item_c" class="itemButton" @click="textEvent">item C</button>
+        , and an 
+        <button id="item_d" class="itemButton" @click="textEvent">item D</button>
+        .
+       </p>
+    </section>
     <div id='svg-container'>
     </div>
     <div id="dialog-card-setup">
@@ -70,7 +86,6 @@ export default {
         const self = this;
         
         this.dialogData = data[0];
-
         this.addTextElements(this.dialogData);
       },
       addTextElements(data) {
@@ -80,7 +95,8 @@ export default {
           .data(data)
           .enter()
           .append("rect")
-            .attr("class", d => "rect " + d.class)
+            .attr("class", d => "rect")
+            .attr("id", d => d.id)
             .attr("x", 10)
             .attr("y", function(d,i) { return i*30 + 30 })
             .attr("height", 5)
@@ -92,7 +108,8 @@ export default {
           .data(data)
           .enter()
           .append("text")
-            .attr("class", d => "rectText " + d.class)
+            .attr("class", d => "rectText")
+            .attr("id", d => d.id)
             .attr("text-anchor", "start")
             .attr("x", 20)
             .attr("y", function(d,i) { return i*30 + 37 })
@@ -111,11 +128,48 @@ export default {
         this.cardImageSource = require("@/assets/images/" + d.source);
         this.cardAltText = d.alt_text;
         this.showDialog = true;
+      },
+      textEvent(e) {
+        const self = this;
+
+        const item = e.target
+        const itemID = item.id
+        const itemData = self.getData(itemID)
+
+        self.populateCard(itemData)
+      },
+      getData(itemID) {
+        const self = this;
+
+        let itemData = self.dialogData.filter(function(dataRow) {
+          return dataRow.id === itemID
+        })[0]
+
+        return (itemData)
       }
     },
 } 
 </script>
 
 <style lang="scss">
-
+.itemButton {
+  border-radius: 0.25rem;
+  margin: 5px 0px 5px 5px;
+  padding: 2.5px 5px 2.5px 5px;
+  max-width: 24rem;
+  background-color: white;
+  border: 0.5px solid #949494;
+  border-radius: 0.25rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.itemButton:hover {
+  background-color: #949494;
+  color: white;
+  @media screen and (max-width: 600px) {
+    background-color: white;
+    color: black;
+  }
+}
 </style>
