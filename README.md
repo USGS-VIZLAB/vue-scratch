@@ -58,6 +58,11 @@ Then you are ready to go!
 `ImageZoom.vue`: A template for including a zoomable image. The image is zoomable with mouse scroll wheel, trackpad, touchscreen, or using zoom buttons. To use `main.js` needs to be modified to include `import VueZoomer from 'vue-zoomer';` and `Vue.use(VueZoomer);`:
   * <img src="https://user-images.githubusercontent.com/54007288/200002258-e21a3a77-67f6-47a7-b067-f346e1764d28.png" height="300">
 
+`UseDialogCard.vue`: A template for including a pop-up dialog window that is triggered on click and is dynamically populated using loaded data. This component makes use of a base component `Dialog.vue` that includes placeholders for a title, description and image. The template in `UseDialogCard.vue` includes a few different examples of how to add click events to page elements to populate custom dialogs: via dynamically generated buttons, using single buttons inserted into text, and through interaction with d3-generated svg elements or text: 
+  * The dialog:
+    <img src="https://user-images.githubusercontent.com/54007288/200064327-a2be9d5a-7b18-4e7a-a1ee-7ba466fab10f.png" height="300">
+
+
 ## Disclaimer
 
 This software is in the public domain because it contains materials that originally came from the U.S. Geological Survey, an agency of the United States Department of Interior. For more information, see the official USGS copyright policy at [http://www.usgs.gov/visual-id/credit_usgs.html#copyright](http://www.usgs.gov/visual-id/credit_usgs.html#copyright)
