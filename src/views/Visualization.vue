@@ -1,6 +1,6 @@
 <template>
   <div id="visualization">
-    <ImageZoom />
+    <useDialogCard />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
-      ImageZoom: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/ImageZoom")
+      useDialogCard: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/UseDialogCard")
     },
     computed: {
     },
