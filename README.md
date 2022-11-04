@@ -55,6 +55,9 @@ Then you are ready to go!
 
 `Figure.vue`: An image or figure template. Includes structure to include size and type options to fit the viewport and device type. 
 
+`ImageZoom.vue`: A template for including a zoomable image. The image is zoomable with mouse scroll wheel, trackpad, touchscreen, or using zoom buttons. To use `main.js` needs to be modified to include `import VueZoomer from 'vue-zoomer';` and `Vue.use(VueZoomer);`:
+  * <img src="https://user-images.githubusercontent.com/54007288/200002258-e21a3a77-67f6-47a7-b067-f346e1764d28.png" height="300">
+
 ## Disclaimer
 
 This software is in the public domain because it contains materials that originally came from the U.S. Geological Survey, an agency of the United States Department of Interior. For more information, see the official USGS copyright policy at [http://www.usgs.gov/visual-id/credit_usgs.html#copyright](http://www.usgs.gov/visual-id/credit_usgs.html#copyright)
