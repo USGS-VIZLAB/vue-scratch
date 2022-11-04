@@ -5,7 +5,7 @@
         id="button-container"
         class="buttonContainer"
       >
-        <h3>
+        <h3 id="optionsBar">
           <span>
             Zoom:
             <button
@@ -79,6 +79,9 @@ export default {
 #image-zoomer {
   height: 85vh;
 }
+#optionsBar {
+  padding: .1em 0 .1em 0;
+}
 #button-container {
   padding-left: 15px;
   height: 100%;
@@ -94,8 +97,7 @@ export default {
 }
 .button {
   border-radius: 0.25rem;
-  margin-right: 2px;
-  margin-top: 2px;
+  margin: 2px 2px 7px 0;
   padding: 2.5px 5px 2.5px 5px;
   max-width: 24rem;
   background-color: white;
