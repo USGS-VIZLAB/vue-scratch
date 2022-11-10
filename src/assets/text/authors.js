@@ -1,4 +1,6 @@
 export default {
+    // do not delete section. delete individuals as needed. modify content as needed
+    // currently only 'fullName', 'firstName', 'initials', 'profile_link', and 'contribution' are used
     primaryAuthors: [
       {
         firstName: 'Althea1',
@@ -28,6 +30,8 @@ export default {
         contribution: 'made the charts'
       }
     ],
+    // do not delete section. delete any or all individuals as needed. modify content as needed
+    // currently only 'fullName', 'firstName', 'initials', 'profile_link', and 'contribution' are used
     additionalAuthors: [
       {
         firstName: 'Cee',
