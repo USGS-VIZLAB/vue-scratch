@@ -93,6 +93,6 @@ export default {
 <style>
 #author-container {
   height: auto;
-  padding: 10px 0 10px 0;
+  padding: 10px 15px 10px 15px;
 }
 </style>
