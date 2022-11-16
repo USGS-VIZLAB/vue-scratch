@@ -1,5 +1,5 @@
 <template>
-  <div id="author-container">
+  <div id="author-container" v-if="showAuthors">
     <p>
       <span id="primary-author-statment">
         The development was lead by 
@@ -70,12 +70,14 @@ export default {
         mobileView: isMobile, // test for mobile
         primaryAuthors: authors.primaryAuthors,
         additionalAuthors: authors.additionalAuthors,
-        showAdditionalAuthors: null, // Turn on or off attribution for additional authors
-        showContributionStatements: true, // Turn on or off contribution statements for ALL authors
-        showAditionalContributionStatement: null // if showContributionStatements is true, turn on or off contriubtion statements for ADDITIONAL authors
+        showAuthors: null, // Turn on or off attribution for all authors
+        showAdditionalAuthors: null, // If showAuthors is true, turn on or off attribution for additional authors
+        showContributionStatements: true, // If showAuthors is true, turn on or off contribution statements for ALL authors
+        showAditionalContributionStatement: null // If showAuthors is true and if showContributionStatements is true, turn on or off contriubtion statements for ADDITIONAL authors
       }
     },
     mounted(){   
+      this.showAuthors = this.primaryAuthors.length > 0 ? true: false; // Show author statements for any authors
       this.showAdditionalAuthors =  this.additionalAuthors.length > 0 ? true : false; // Show author statements for additional authors if any are listed
       this.showAditionalContributionStatement = this.additionalAuthors.length > 0 ? true : false; // Show contributions statements for additional authors if any are listed AND showContributionStatements is true
     },
