@@ -2,7 +2,7 @@
   <div id="author-container" v-if="showAuthors">
     <p>
       <span id="primary-author-statment">
-        The development was lead by 
+        The development of {{ appTitle }} was lead by 
         <span
           v-for="(author, index) in primaryAuthors" 
           :key="`${author.initials}-attribution`"
@@ -67,6 +67,7 @@ export default {
     data() {
       return {
         publicPath: process.env.BASE_URL, // allows the application to find the files when on different deployment roots
+        appTitle: process.env.VUE_APP_TITLE, // Pull in title of page from Vue environment (set in .env)
         mobileView: isMobile, // test for mobile
         primaryAuthors: authors.primaryAuthors,
         additionalAuthors: authors.additionalAuthors,
@@ -77,6 +78,7 @@ export default {
       }
     },
     mounted(){   
+      console.log(this.appTitle)
       this.showAuthors = this.primaryAuthors.length > 0 ? true: false; // Show author statements for any authors
       this.showAdditionalAuthors =  this.additionalAuthors.length > 0 ? true : false; // Show author statements for additional authors if any are listed
       this.showAditionalContributionStatement = this.additionalAuthors.length > 0 ? true : false; // Show contributions statements for additional authors if any are listed AND showContributionStatements is true
