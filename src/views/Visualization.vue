@@ -1,6 +1,6 @@
 <template>
   <div id="visualization">
-    <useDialogCard />
+    <authorship />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     name: 'Visualization',
     components: {
-      useDialogCard: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/UseDialogCard")
+      authorship: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/Authorship")
     },
     computed: {
     },
